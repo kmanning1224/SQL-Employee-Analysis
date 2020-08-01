@@ -88,7 +88,9 @@ order by employees.last_name, count (*) DESC
 
 ## Bonus
 * Create a histogram to visualize the most common salary ranges for employees.
+
 ![histogram](https://github.com/kmanning1224/sql-challenge/blob/master/EmployeeSQL/histogram_averages.png)
 
 * Create a bar chart of average salary by title.
+
 ![barplot](https://github.com/kmanning1224/sql-challenge/blob/master/EmployeeSQL/barplot_salary_average.png)
