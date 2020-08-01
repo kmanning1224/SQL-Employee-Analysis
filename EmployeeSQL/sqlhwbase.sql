@@ -1,9 +1,9 @@
-DROP TABLE departments
-DROP TABLE employees
-DROP TABLE dept_emp
-DROP TABLE dept_manager
-DROP TABLE salaries
-DROP TABLE titles
+DROP TABLE departments IF EXISTS;
+DROP TABLE employees IF EXISTS;
+DROP TABLE dept_emp IF EXISTS;
+DROP TABLE dept_manager IF EXISTS;
+DROP TABLE salaries IF EXISTS;
+DROP TABLE titles IF EXISTS;
 
 CREATE TABLE departments(
 dept_no VARCHAR(30),
