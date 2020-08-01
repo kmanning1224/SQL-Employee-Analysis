@@ -43,6 +43,15 @@ inner join departments on
 dept_manager.dept_no = departments.dept_no
 where dept_name = 'Sales'
 
+select employees.emp_no, employees.last_name, employees.first_name,
+	departments.dept_name
+from employees
+inner join dept_manager on
+employees.emp_no = dept_manager.emp_no
+inner join departments on 
+dept_manager.dept_no = departments.dept_no
+where dept_name = 'Sales''Development'
+
 
 SELECT employees.last_name, count (*)
 FROM employees
