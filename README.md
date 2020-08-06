@@ -157,3 +157,14 @@ order by employees.last_name, count (*) DESC
 * Create a bar chart of average salary by title.
 
 ![barplot](https://github.com/kmanning1224/sql-challenge/blob/master/EmployeeSQL/barplot_salary_average.png)
+
+### Epilogue
+
+* Evidence in hand, you march into your boss's office and present the visualization. With a sly grin, your boss thanks you for your work. On your way out of the office, you hear the words, "Search your ID number." You look down at your badge to see that your employee ID number is 499942.
+
+```
+df_employee = combined_data_final.copy()
+df_employee.loc[df_employee['emp_no'] == 499942]
+```
+
+![epiloguefind](https://i.gyazo.com/d6a51938ea4676547557d3dbe76a4da3.png)
