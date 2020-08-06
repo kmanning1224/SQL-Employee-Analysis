@@ -60,6 +60,10 @@ title VARCHAR(20),
 primary key (emp_title_id));
 
 ```
+## ERD of Tables
+
+![erd](https://github.com/kmanning1224/sql-challenge/blob/master/EmployeeSQL/ERDoftables.png)
+
 ## Questions answered with queries
 
 * List the following details of each employee: employee number, last name, first name, sex, and salary.
