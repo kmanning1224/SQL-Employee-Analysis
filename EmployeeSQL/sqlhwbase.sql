@@ -1,9 +1,9 @@
-DROP TABLE departments IF EXISTS;
-DROP TABLE employees IF EXISTS;
-DROP TABLE dept_emp IF EXISTS;
-DROP TABLE dept_manager IF EXISTS;
-DROP TABLE salaries IF EXISTS;
-DROP TABLE titles IF EXISTS;
+-- DROP TABLE departments IF EXISTS;
+-- DROP TABLE employees IF EXISTS;
+-- DROP TABLE dept_emp IF EXISTS;
+-- DROP TABLE dept_manager IF EXISTS;
+-- DROP TABLE salaries IF EXISTS;
+-- DROP TABLE titles IF EXISTS;
 
 CREATE TABLE departments(
 dept_no VARCHAR(30),
@@ -20,7 +20,8 @@ first_name VARCHAR(30),
 last_name VARCHAR(30),
 sex TEXT,
 hire_data DATE,
-PRIMARY KEY (emp_no));
+PRIMARY KEY (emp_no),
+foreign key (emp_title_id) references titles (emp_title_id));
 
 CREATE TABLE dept_emp(
 emp_no INT NOT NULL,
@@ -38,11 +39,6 @@ foreign key (emp_no) references employees(emp_no));
 -- select * from dept_manager
 
 
-
--- ALTER TABLE employees
--- ADD foreign key (emp_title_id) references titles(emp_title_id);
--- select * from employees
-
 CREATE TABLE salaries(
 emp_no INT NOT NULL,
 salary INT NOT NULL,
@@ -53,7 +49,7 @@ foreign key (emp_no) references employees(emp_no));
 CREATE TABLE titles(
 emp_title_id VARCHAR(10),
 title VARCHAR(20),
-PRIMARY KEY (emp_title_id));
+primary key (emp_title_id));
 
 -- select * from titles
 
