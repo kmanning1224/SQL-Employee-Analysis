@@ -28,7 +28,8 @@ first_name VARCHAR(30),
 last_name VARCHAR(30),
 sex TEXT,
 hire_data DATE,
-PRIMARY KEY (emp_no));
+PRIMARY KEY (emp_no),
+foreign key (emp_title_id) references titles (emp_title_id));
 
 CREATE TABLE dept_emp(
 emp_no INT NOT NULL,
@@ -45,7 +46,6 @@ foreign key (emp_no) references employees(emp_no));
 
 -- select * from dept_manager
 
--- select * from employees
 
 CREATE TABLE salaries(
 emp_no INT NOT NULL,
@@ -57,12 +57,13 @@ foreign key (emp_no) references employees(emp_no));
 CREATE TABLE titles(
 emp_title_id VARCHAR(10),
 title VARCHAR(20),
-PRIMARY KEY (emp_title_id));
+primary key (emp_title_id));
 
--- select * from titles
-
--- select emp_no from employees
 ```
+## ERD of Tables
+
+![erd](https://github.com/kmanning1224/sql-challenge/blob/master/EmployeeSQL/ERDoftables.png)
+
 ## Questions answered with queries
 
 * List the following details of each employee: employee number, last name, first name, sex, and salary.
